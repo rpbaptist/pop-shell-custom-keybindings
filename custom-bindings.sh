@@ -13,7 +13,6 @@
 # application.                                                               #
 ##############################################################################
 
-# First Let's name our vim keys to make things more readable later
 left="n"
 down="e"
 up="u"
@@ -60,6 +59,12 @@ dconf write ${KEYS_POP}/tile-move-right-global "['<Super><Shift>Right', '<Super>
 dconf write ${KEYS_POP}/tile-move-up-global "['<Super><Shift>Up', '<Super><Shift>${up}']"
 dconf write ${KEYS_POP}/tile-move-down-global "['<Super><Shift>Down', '<Super><Shift>${down}']"
 
+# Resize Tiles
+# dconf write ${KEYS_POP}/tile-resize-left-global "['<Primary><Super>Left', '<Primary><Super>${left}']"
+# dconf write ${KEYS_POP}/tile-resize-right-global "['<Primary><Super>Right', '<Primary><Super>${right}']"
+# dconf write ${KEYS_POP}/tile-resize-up-global "['<Primary><Super>Up', '<Primary><Super>${up}']"
+# dconf write ${KEYS_POP}/tile-resize-down-global "['<Primary><Super>Down', '<Primary><Super>${down}']"
+
 dconf write ${KEYS_POP}/toggle-stacking-global "['<Super>s']"
 
 # Toggle maximization state
@@ -76,26 +81,25 @@ dconf write ${KEYS_POP}/tile-accept "['Return']"
 dconf write ${KEYS_POP}/tile-reject "['Escape']"
 
 # Move tiles
-dconf write ${KEYS_POP}/tile-move-left "['<Super>Left', '<Super>${left}']"
-dconf write ${KEYS_POP}/tile-move-right "['<Super>Right', '<Super>${right}']"
-dconf write ${KEYS_POP}/tile-move-up "['<Super>Up', '<Super>${up}']"
-dconf write ${KEYS_POP}/tile-move-down "['<Super>Down', '<Super>${down}']"
+dconf write ${KEYS_POP}/tile-move-left "['<Super><Shift>Left', '<Super><Shift>${left}']"
+dconf write ${KEYS_POP}/tile-move-right "['<Super><Shift>Right', '<Super><Shift>${right}']"
+dconf write ${KEYS_POP}/tile-move-up "['<Super><Shift>Up', '<Super><Shift>${up}']"
+dconf write ${KEYS_POP}/tile-move-down "['<Super><Shift>Down', '<Super><Shift>${down}']"
 
 # Resize Tiles
 dconf write ${KEYS_POP}/tile-resize-left "['<Primary><Super>Left', '<Primary><Super>${left}']"
 dconf write ${KEYS_POP}/tile-resize-right "['<Primary><Super>Right', '<Primary><Super>${right}']"
 dconf write ${KEYS_POP}/tile-resize-up "['<Primary><Super>Up', '<Primary><Super>${up}']"
 dconf write ${KEYS_POP}/tile-resize-down "['<Primary><Super>Down', '<Primary><Super>${down}']"
-# Select tiles
-dconf write ${KEYS_POP}/tile-swap-left "['<Super><Shift>Left', '<Super><Shift>${left}']"
-dconf write ${KEYS_POP}/tile-swap-right "['<Super><Shift>Right', '<Super><Shift>${right}']"
-dconf write ${KEYS_POP}/tile-swap-up "['<Super><Shift>Up', '<[Shift]>${up}']"
-dconf write ${KEYS_POP}/tile-swap-down "['<Super><Shift>Down', '<Super><Shift>${down}']"
+
+# Swap tiles
+dconf write ${KEYS_POP}/tile-swap-left "['<Primary><Super><Alt>Left', '<Primary><Super><Alt>${left}']"
+dconf write ${KEYS_POP}/tile-swap-right "['<Primary><Super><Alt>Right', '<Primary><Super><Alt>${right}']"
+dconf write ${KEYS_POP}/tile-swap-up "['<Primary><Super><Alt>Up', '<[Shift]>${up}']"
+dconf write ${KEYS_POP}/tile-swap-down "['<Primary><Super><Alt>Down', '<Primary><Super><Alt>${down}']"
 #
 #  end of tile adjustment mode bindings #
 #########################################
-
-dconf write ${KEYS_POP}/show-title "false"
 
 # Various bindings and launchers
 # Lock screen
